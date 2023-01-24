@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nacionalidade</title>
+  <style>
+    body{
+      background:rgb(202, 241, 238) ;
+      font: normal 15px arial;
+      border: 5px black solid;
+    }
+  
+  </style>
+</head>
+<body>
+  <h1>Descubra se você é Brssileiro!</h1>
+  Em qual País você nasceu? <input type="text" name="txtn" id="txtn">
+  <input type="button" value="verificar" onclick="confirmar()">
+  <div id="res"></div>
+
+  <script>
+    function confirmar(){
+      var txt = document.querySelector("input#txtn")
+      var res = document.querySelector("div#res")
+      var nun = txt.value;
+      res.innerHTML = `<p>Seu Páis de origem é <strong>${nun}</strong></p>`
+      if(nun == 'Brasil' || nun == 'brasil'){
+        res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+      }else{
+        res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+      }
+    }
+  </script>
+</body>
+</html>
